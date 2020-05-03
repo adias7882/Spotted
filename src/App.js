@@ -1,11 +1,15 @@
-import React from 'react'; 
+import React, { Component } from 'react'; 
+import { Switch, Route} from 'react-router-dom';
+import Main from './pages/index.js'
 
-function App(){
-  return(
-    <div className="app">
-      <h1>First line of code for Spotted App!</h1>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return(
+      <Switch>
+        <Route path="/" component={Main} />
+      </Switch>
+    );
+  }
 }
 
 export default App;
