@@ -11,14 +11,15 @@
 *{
   margin:0;
   padding:0;
+  color: var(--main-light-gray);
+  font-family: SignikaNegative;
+  text-decoration: none;
   box-sizing: border-box;
 }
 
 body{
-  font-family: SignikaNegative;;
   background: var(--main-dark-gray);
   color: var(--main-light-gray);
-
 }
 
 @font-face {
@@ -26,15 +27,9 @@ body{
   src: local('SignikaNegative'), url(../fonts/SignikaNegative-Regular.ttf) format('truetype');
 }
 
-.header-container{
-  background:var(--main-dark-blue);
-  height: 5rem;
-}
-
 .landing-page-container{
-  height: 47rem;
   background: url(../images/classroom.png) no-repeat center center/cover;
-}
+} 
 
 #blue{
   color:var(--main-light-blue);

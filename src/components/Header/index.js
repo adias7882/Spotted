@@ -1,50 +1,65 @@
 import React, { Component } from 'react';
 import logo from '../../svg/spotted-logosvg.svg'
-//import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 class Header extends Component {
     render() {
         return(
-            <HeaderComponent className="header-container">
-                <Logo src={logo} alt="Logo not loaded"/>
-                <ul>
-                    <li className="li-btn" id="sections-navbar">Seções</li>
-                    <li className="li-btn" id="about-navbar">Sobre a Iniciativa</li>
-                </ul>                
-            </HeaderComponent>
+            <MyDesktopNavbar>
+                <img src={logo} alt="Logo not loaded"/>
+
+                <ul className="nav-links">
+                    <li>
+                        <Link to="/">Seções</Link>
+                    </li>
+                    <li>
+                        <Link to="/">Sobre a Iniciativa</Link>
+                    </li>
+
+                </ul>
+            </MyDesktopNavbar>
         );
     }
 }
 
 export default Header;
 
-//Logo
-const Logo = styled.img`
-    position:absolute;
-    top: 1.5%;
-    left: 3%;
-`;
+//Nabvar Styling
+const MyDesktopNavbar = styled.nav`
+    display: Flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background: var(--main-dark-blue);
+    height: 10vh;
+    font-size: 1.5rem;
+    margin-block-start: 0;
+    padding-block-start: 0;
 
-//Header Component
-const HeaderComponent = styled.div`
-    .li-btn{
-        list-style-type:None;
-        top: 3.5%;
-        left: 77%;
-        line-height:normal;
-        font-size:1.5rem;
+    .nav-links{
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-evenly;
+        align-items: center;
+
+        width: 35vh;
+        list-style:none;
         color: var(--main-light-gray);
-        position: absolute;
-        cursor: pointer;
-        transition: background 0.2s easy-in;
-        &:hover {
+
+        &:hover{
             color: var(--main-light-blue);
         }
     }
-    #about-navbar{
-        left:85%;
+
+    .Link {
+        color: white;
+        font-size: 2.5vg;
+        text-decoration: none;
+        color: var(--main-light-gray);
+        margin: 20px 10px;
     }
 `;
+
 
 
